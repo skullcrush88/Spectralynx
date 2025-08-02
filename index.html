@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpectraLynx Technologies Private Limited - Turnkey Solution Provider</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
@@ -14,39 +15,66 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
 </head>
 <body>
+    <canvas id="backgroundStarsCanvas"></canvas>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <div class="nav-logo">
                 <img src="public/assets/logos/logo-primary.png" alt="SpectraLynx Technologies Private Limited Logo">
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#why-us">Why Us</a>
-                <a href="#footer">Contact</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li class="nav-item"><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <p>Your Trusted Turnkey Solution Provider & System Integration House</p>
-        </div>
-        <div class="hero-image">
-            <img src="assets/images/hero-bg.png.png" alt="Technology Solutions Background">
-        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Your Trusted Turnkey</span>
+                    <br>Solution Provider
+                </h1>
+                <p class="hero-description">
+                    SpectraLynx Technologies Private Limited specializes in end-to-end solutions for Telecom, Data Networking, Audio Visual System Integration (AVSI), CCTV Surveillance, and Public Addressing Systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
+                </div>
+            </div>
+            </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="about-container">
-            <h2>About SpectraLynx Technologies Private Limited</h2>
-            <p>Based in Hyderabad, we are a premier Turnkey Solution Provider and System Integration House. We specialize in end-to-end solutions for Telecom, Data Networking, Audio Visual System Integration (AVSI), CCTV Surveillance, and Public Addressing Systems.</p>
-            <p>Our comprehensive service portfolio includes all necessary passive components and cabling works, ensuring complete solutions for your business needs.</p>
-            
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About SpectraLynx</h2>
+                <p class="section-subtitle">Pioneering the future of technology solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Based in Hyderabad, SpectraLynx Technologies Pvt Ltd is a premier Turnkey Solution Provider and System Integration House. Our comprehensive service portfolio encompasses all necessary passive components and cabling works, ensuring complete end-to-end solutions for your business needs.
+                    </p>
+                    <p>
+                        We specialize in cutting-edge technology solutions including telecom infrastructure, data networking, audio visual integration, CCTV surveillance systems, and public addressing solutions. Our team of certified professionals brings expertise in system integration, delivering innovative solutions that empower businesses to achieve their technological goals.
+                    </p>
+                    <p>
+                        With a commitment to excellence and customer satisfaction, we maintain the highest standards in our work and use only premium quality equipment. Our solutions are designed to be scalable, reliable, and future-ready, helping organizations stay ahead in the rapidly evolving technology landscape.
+                    </p>
+                </div>
+            </div>
             <div class="mission-vision">
                 <div class="mission">
                     <i class="fas fa-bullseye"></i>
@@ -62,178 +90,195 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="solutions" class="features">
-        <h2 class="section-title">Our Solutions</h2>
-        <div class="features-container">
-            <div class="feature-card">
-                <div class="feature-image">
-                    <img src="public/assets/images/IPPBX.jpg" alt="Telecom & Voice Solutions">
-                </div>
-                <h3>Telecom & Voice Solutions</h3>
-                <ul>
-                    <li>IP PBX (Unified Communication)</li>
-                    <li>Call Centre Solutions</li>
-                    <li>Analog / IP Phones</li>
-                    <li>Servers & PC Solutions</li>
-                    <li>Professional Headsets</li>
-                </ul>
+    <!-- Solutions Section (formerly Services) -->
+    <section id="solutions" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Solutions</h2>
+                <p class="section-subtitle">Comprehensive solutions tailored to your needs</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-image">
-                    <img src="public/assets/images/Nandit.jpg" alt="Networking and IT Infrastructure">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/assets/images/board-room.jpg" alt="Audio Visual Integration">
+                    </div>
+                    <h3>Audio Visual Integration</h3>
+                    <p>Seamless integration of audio visual systems for immersive experiences.</p>
+                    <ul class="service-details">
+                        <li>Video Conferencing</li>
+                        <li>Board Room Solutions</li>
+                        <li>Auditorium Systems</li>
+                        <li>Videowalls & Digital Signage</li>
+                        <li>Home Theatre Systems</li>
+                    </ul>
                 </div>
-                <h3>Networking and IT Infrastructure</h3>
-                <ul>
-                    <li>Network Switches</li>
-                    <li>Servers & Firewall</li>
-                    <li>Wireless Solutions</li>
-                    <li>Access Points</li>
-                    <li>Network Infrastructure</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <div class="feature-image">
-                    <img src="public/assets/images/board-room.jpg" alt="AVSI Solutions">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/assets/images/IPPBX.jpg" alt="Telecom Infrastructure">
+                    </div>
+                    <h3>Telecom & Voice Solutions</h3>
+                    <p>End-to-end solutions for robust and scalable telecom networks.</p>
+                    <ul class="service-details">
+                        <li>IP PBX (Unified Communication)</li>
+                        <li>Call Centre Solutions</li>
+                        <li>Analog / IP Phones</li>
+                        <li>Servers & PC Solutions</li>
+                        <li>Professional Headsets</li>
+                    </ul>
                 </div>
-                <h3>AVSI Solutions</h3>
-                <ul>
-                    <li>Video Conferencing</li>
-                    <li>Board Room Solutions</li>
-                    <li>Auditorium Systems</li>
-                    <li>Videowalls & Digital Signage</li>
-                    <li>Home Theatre Systems</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <div class="feature-image">
-                    <img src="public/assets/images/cctv.jpg" alt="Surveillance & Safety">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/assets/images/cctv.jpg" alt="CCTV Surveillance">
+                    </div>
+                    <h3>CCTV Surveillance</h3>
+                    <p>Advanced surveillance solutions for enhanced security and monitoring.</p>
+                    <ul class="service-details">
+                        <li>IP Camera Systems</li>
+                        <li>HD & 4K Surveillance</li>
+                        <li>Remote Monitoring</li>
+                        <li>Video Analytics</li>
+                        <li>Storage Solutions</li>
+                    </ul>
                 </div>
-                <h3>Surveillance & Safety</h3>
-                <ul>
-                    <li>IP & Analog CCTV</li>
-                    <li>Public Addressing Systems</li>
-                    <li>Security Solutions</li>
-                    <li>Safety Equipment</li>
-                </ul>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/assets/images/board-room.jpg" alt="Data Networking">
+                    </div>
+                    <h3>Networking and IT Infrastructure</h3>
+                    <p>Designing and implementing high-performance data networks.</p>
+                    <ul class="service-details">
+                        <li>Network Switches</li>
+                        <li>Servers & Firewall</li>
+                        <li>Wireless Solutions</li>
+                        <li>Access Points</li>
+                        <li>Network Infrastructure</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/assets/images/IPPBX.jpg" alt="Telecom and Voice Solutions">
+                    </div>
+                    <h3>Telecom and Voice Solutions</h3>
+                    <p>Comprehensive telecom and voice solutions for modern businesses.</p>
+                    <ul class="service-details">
+                        <li>IP PBX (Unified Communication)</li>
+                        <li>Call Centre Solutions</li>
+                        <li>Analog / IP Phones</li>
+                        <li>Servers & PC Solutions</li>
+                        <li>Professional Headsets</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section id="why-us" class="why-us">
-        <h2 class="section-title">Why Choose Us</h2>
-        <div class="why-us-container">
-            <div class="why-us-card">
-                <i class="fas fa-certificate"></i>
-                <h3>Expert Team</h3>
-                <p>Our certified professionals bring years of experience in system integration and technology solutions.</p>
+    <section id="why-us" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">Your trusted partner for technological excellence</p>
             </div>
-            <div class="why-us-card">
-                <i class="fas fa-tasks"></i>
-                <h3>Project Management Excellence</h3>
-                <p>Efficient project execution with clear communication, timely delivery, and quality assurance at every step.</p>
-            </div>
-            <div class="why-us-card">
-                <i class="fas fa-puzzle-piece"></i>
-                <h3>Tailored Solutions</h3>
-                <p>Customized technology solutions designed to meet your specific business requirements and objectives.</p>
-            </div>
-            <div class="why-us-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Quality Service</h3>
-                <p>We maintain the highest standards in our work and use only premium quality equipment.</p>
-            </div>
-            <div class="why-us-card">
-                <i class="fas fa-headset"></i>
-                <h3>Support and Maintenance</h3>
-                <p>Rapid troubleshooting, SLA based services and comprehensive AMC.</p>
-            </div>
-            <div class="why-us-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Training and Documentation</h3>
-                <p>Comprehensive user training, detailed system documentation, and knowledge transfer sessions for seamless operations.</p>
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-star"></i></div>
+                    <h3>Expert Team</h3>
+                    <p>Our certified professionals bring years of experience in system integration and technology solutions.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Project Management Excellence</h3>
+                    <p>Efficient project execution with clear communication, timely delivery, and quality assurance at every step.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Tailored Solutions</h3>
+                    <p>Customized technology solutions designed to meet your specific business requirements and objectives.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Quality Service</h3>
+                    <p>We maintain the highest standards in our work and use only premium quality equipment.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Support and Maintenance</h3>
+                    <p>Rapid troubleshooting, SLA based services and comprehensive AMC.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Training and Documentation</h3>
+                    <p>Comprehensive user training, detailed system documentation, and knowledge transfer sessions for seamless operations.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>SpectraLynx Technologies Pvt Ltd</h3>
-                <p>Your trusted partner in technology solutions</p>
+    <!-- Interactive Game Section -->
+    <section id="game-section" class="game-section">
+        <div class="container">
+            <div class="game-header">
+                <h2 class="game-title gradient-text">Memory Card Game</h2>
+                <p class="game-subtitle">All cards use icons representing our services!</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#solutions">Our Solutions</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#why-us">Why Choose Us</a></li>
-                </ul>
+            <div class="game-container game-container-narrow">
+                <div class="memory-game-vertical">
+                    <div id="memoryGameGrid"></div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p><strong>Headquarters:</strong> Hyderabad, India</p>
-                <p><strong>Email:</strong> shajee@spectralynxtech.com</p>
-                <p><strong>Phone:</strong> +91 7032821848</p>
+            <div class="game-controls">
+                <div class="game-moves"><span>Moves: <span id="moves">0</span></span></div>
+                <p class="game-description">Flip two cards to find a matching pair.</p>
+                <button id="startGame" class="game-btn">Restart</button>
+                <div class="game-promo">
+                    <p>🎯 <strong>Test your memory while learning about our expertise!</strong></p>
+                    <p>From Audio Visual Integration to Network Infrastructure, we provide comprehensive technology solutions for your business needs.</p>
+                    <p>Ready to transform your business? <a href="#footer" class="promo-link">Contact us today!</a></p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 <strong>SpectraLynx Technologies Pvt Ltd</strong>. All rights reserved.</p>
+    </section>
+
+    <!-- Game Modal Overlay -->
+    <div class="game-modal" id="gameModal" style="display:none;">
+        <div class="game-modal-content" id="gameModalContent">
+            <!-- Content will be set by JS -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SpectraLynx Technologies Pvt Ltd</h3>
+                    <p>Your trusted partner for innovative technology solutions and system integration services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Headquarters: Hyderabad, India</li>
+                        <li>Email: <a href="mailto:shajee@spectralynxtech.com">shajee@spectralynxtech.com</a></li>
+                        <li>Phone: <a href="tel:+917032821848">+91 7032821848</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpectraLynx Technologies Pvt Ltd. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-    <div class="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-    <script>
-        // Scroll to Top Button
-        const scrollTop = document.querySelector('.scroll-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-        });
-        
-        scrollTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
 
-        // Navbar Hide on Scroll
-        let lastScroll = 0;
-        const navbar = document.querySelector('.navbar');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                navbar.classList.add('hide');
-            } else {
-                navbar.classList.remove('hide');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
