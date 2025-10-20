@@ -52,7 +52,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: var(--white);
+    background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -211,6 +211,15 @@ body {
     filter: grayscale(20%);
 }
 
+#three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind hero-content (z-index: 2) and hero-image (z-index: 0 if no z-index is specified in hero-image, but hero-image has 0, so it will be on the same level as hero-image)*/
+}
+
 /* About Section */
 .about {
     padding: 6rem 2rem;
@@ -257,6 +266,7 @@ body {
 }
 
 .about p {
+    text-align: justify;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -428,6 +438,11 @@ body {
     transform: scale(1.1);
 }
 
+/* Specific positioning for digital marketing image */
+.feature-card:nth-child(5) .feature-image img {
+    object-position: center 75%;
+}
+
 .feature-card h3 {
     color: var(--primary);
     margin: 1.5rem 1.5rem 1rem;
@@ -531,6 +546,18 @@ body {
 .why-us-card:hover i {
     transform: scale(1.2) rotate(5deg);
     color: var(--text-dark);
+}
+
+.why-us-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.why-us-card p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Footer */
