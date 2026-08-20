@@ -1,0 +1,155 @@
+.header{
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    top: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+    color: white;
+    padding: 20px 35px;
+    justify-content: space-between;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        
+        .logoImage {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        &:hover {
+            .logoImage {
+                transform: scale(1.02);
+            }
+        }
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+
+        .el{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            cursor: pointer;
+            &:hover{
+                .indicator{
+                    transform: scale(1);
+                }
+            }
+            .indicator{
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                top: 45px;
+                left: 50%;
+                background-color: white;
+                border-radius: 50%;
+                transform: scale(0) translateX(-50%);
+                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+        }
+        a{
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            transition: opacity 0.25s ease;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    } 
+}
+.headerButtonContainer{
+    transform: scale(0);
+    position: fixed;
+    right: 0px;
+    z-index: 4;
+
+    .button{
+        position: relative;
+        margin: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #1C1D20;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .burger{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        &::after, &::before{
+            content: "";
+            display: block;
+            height: 1px;
+            width: 40%;
+            margin: auto;
+            background-color: white;
+            position: relative;
+            transition: transform 0.3s;
+        }
+    
+        &::after{
+            top: -5px;
+        }
+    
+        &::before{
+            top: 5px;
+        }
+    }
+    
+    .burgerActive{
+    
+        &::after{
+            transform: rotate(45deg);
+            top: -1px;
+        }
+    
+        &::before{
+            transform: rotate(-45deg);
+            top: 0px;
+        }
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        top: 12px;
+        left: 12px;
+        width: calc(100% - 24px);
+        padding: 15px 20px;
+        .nav {
+            display: none !important;
+        }
+    }
+    .headerButtonContainer {
+        transform: scale(1) !important;
+        top: 10px;
+        right: 10px;
+        .button {
+            margin: 10px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
