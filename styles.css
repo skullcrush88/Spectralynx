@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -9,38 +9,27 @@
 }
 
 :root {
-    /* Primary Colors - Deep Navy */
-    --primary: #1a237e;
-    --primary-light: #534bae;
-    --primary-dark: #000051;
+    /* Design System Colors - System Grid Theme */
+    --bg-dark: #090D16;
+    --bg-card: #131A26;
+    --border-light: rgba(255, 255, 255, 0.06);
+    --border-glow: rgba(6, 182, 212, 0.15);
     
-    /* Secondary Colors - Royal Blue */
-    --secondary: #0277bd;
-    --secondary-light: #58a5f0;
-    --secondary-dark: #004c8c;
+    /* Core Theme Colors */
+    --primary: #f8fafc;
+    --primary-light: #cbd5e1;
+    --primary-dark: #475569;
     
-    /* Accent Colors - Olive Green */
-    --accent: #556B2F;
-    --accent-light: #6B8E23;
-    --accent-dark: #3B4A1F;
+    --secondary: #2563EB;
     
-    /* Text Colors */
-    --text-dark: #2c3e50;
-    --text-light: #546e7a;
+    /* Accents */
+    --accent-copper: #EA580C;
+    --accent-cyan: #06B6D4;
     
-    /* Background Colors */
-    --background-light: #f8f9fa;
-    --white: #ffffff;
-    
-    /* Status Colors */
-    --success: #2e7d32;
-    --warning: #f57f17;
-    --error: #c62828;
-    
-    /* UI Elements */
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* UI settings */
+    --border-radius: 4px;
+    --box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body {
