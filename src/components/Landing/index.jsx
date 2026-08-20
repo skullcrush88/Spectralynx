@@ -7,7 +7,17 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videos = ["/Herobgvid.mp4", "/Herobgvid2.mp4"];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 768px)');
+    setIsMobile(media.matches);
+    const listener = (e) => setIsMobile(e.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, []);
+
+  const videos = ["/Herobgvid.mp4", isMobile ? "/Herobgvid2mobile.mp4" : "/Herobgvid2.mp4"];
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const videoRefs = [videoRef1, videoRef2];
