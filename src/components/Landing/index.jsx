@@ -20,12 +20,14 @@ export default function Home() {
   const videos = [
     "/Herobgvid.mp4",
     "/CCTV-vid2.mp4",
+    "/vid3.mp4",
     isMobile ? "/Herobgvid2mobile.mp4" : "/Herobgvid2.mp4"
   ];
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const videoRef3 = useRef(null);
-  const videoRefs = [videoRef1, videoRef2, videoRef3];
+  const videoRef4 = useRef(null);
+  const videoRefs = [videoRef1, videoRef2, videoRef3, videoRef4];
 
   const prevVideoIndexRef = useRef(currentVideoIndex);
 
