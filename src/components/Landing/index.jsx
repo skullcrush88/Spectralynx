@@ -17,10 +17,17 @@ export default function Home() {
     return () => media.removeEventListener('change', listener);
   }, []);
 
-  const videos = ["/Herobgvid.mp4", isMobile ? "/Herobgvid2mobile.mp4" : "/Herobgvid2.mp4"];
+  const videos = [
+    "/Herobgvid.mp4",
+    "/CCTV-vid2.mp4",
+    isMobile ? "/Herobgvid2mobile.mp4" : "/Herobgvid2.mp4"
+  ];
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
-  const videoRefs = [videoRef1, videoRef2];
+  const videoRef3 = useRef(null);
+  const videoRefs = [videoRef1, videoRef2, videoRef3];
+
+  const prevVideoIndexRef = useRef(currentVideoIndex);
 
   useEffect(() => {
     // Play the active video
@@ -30,13 +37,22 @@ export default function Home() {
       activeVideo.play().catch(() => {});
     }
 
-    // Delay pausing the inactive video to let the transition complete smoothly
-    const inactiveIndex = 1 - currentVideoIndex;
-    const inactiveVideo = videoRefs[inactiveIndex].current;
-    if (inactiveVideo) {
+    // Pause other inactive videos immediately except the active one and the previously active one
+    const prevIndex = prevVideoIndexRef.current;
+    videoRefs.forEach((ref, idx) => {
+      if (idx !== currentVideoIndex && idx !== prevIndex) {
+        if (ref.current) ref.current.pause();
+      }
+    });
+
+    // Delay pausing the previously active video to let the transition complete smoothly
+    if (prevIndex !== currentVideoIndex) {
+      const prevVideo = videoRefs[prevIndex].current;
       const timer = setTimeout(() => {
-        inactiveVideo.pause();
+        if (prevVideo) prevVideo.pause();
       }, 1200);
+      
+      prevVideoIndexRef.current = currentVideoIndex;
       return () => clearTimeout(timer);
     }
   }, [currentVideoIndex]);
